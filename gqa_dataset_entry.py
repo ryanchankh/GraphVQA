@@ -13,8 +13,9 @@ import torch
 import Constants
 import numpy as np
 import torch_geometric
-import torchtext
-
+import torchtext.legacy as torchtext
+import sys
+sys.modules['torchtext.data.field'] = torchtext.data.field
 
 # ROOT_DIR = pathlib.Path('/home/weixin/neuralPoolTest/')
 # SCENEGRAPHS = pathlib.Path('/data/weixin/GQA/sceneGraphs/')  # SCENEGRAPHS = ROOT_DIR / 'Downloads' / 'sceneGraphs'
